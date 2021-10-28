@@ -1,9 +1,10 @@
+import puppeteer from "puppeteer"
+
 export default async function handler(req, res) {
     // faça uma função que tira print de algum website
     // e retorne a foto
     const codePrint = Math.random().toString(36).slice(2, 10)
     async function print (site) {
-        const puppeteer = require('puppeteer');
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox']
