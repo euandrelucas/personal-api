@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     }
     const book = await print(req.query.q)
     res.status(200).json({
-      data: `http://${req.headers.host}/prints/${codePrint}.png`
+      data: `https://${req.headers.host}/prints/${codePrint}.png`
     })
   }
   
