@@ -15,7 +15,7 @@ export default async function handler(req, res) {
         const page = await browser.newPage();
         await page.goto(site || 'https://example.com');
         await page.setViewport({ width: 1920, height: 1080 });
-        await page.screenshot({ path: `./public/prints/${codePrint}.png` });
+        await page.screenshot({ path: `./prints/${codePrint}.png` });
         await browser.close();
     }
     if (!req.query.q) {
